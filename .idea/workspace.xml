@@ -82,7 +82,7 @@
       <workItem from="1571584673939" duration="3955000" />
       <workItem from="1571640847447" duration="4036000" />
       <workItem from="1571722867361" duration="39000" />
-      <workItem from="1571738644922" duration="2880000" />
+      <workItem from="1571738644922" duration="3575000" />
     </task>
     <task id="LOCAL-00001" summary="使用class 建立component">
       <created>1571741598174</created>
@@ -98,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571741688205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="使用useState hook 建立component&#10;react 16.8後支援">
+      <created>1571742757183</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571742757183</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="使用class 建立component" />
     <MESSAGE value="使用class 建立component更正" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用class 建立component更正" />
+    <MESSAGE value="使用useState hook 建立component&#10;react 16.8後支援" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用useState hook 建立component&#10;react 16.8後支援" />
   </component>
 </project>

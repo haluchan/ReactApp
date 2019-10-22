@@ -4,14 +4,18 @@ import Person from "./Person/Person.js";
 const App = props => {
   // useState 建立component 會回傳一個初始狀態值，另一個是要更新初始值的function
   // personsState 初始設定值，setPersonsState 要更新初始值的function
+  // 要更新的組成，要初始組成一樣。因為會被完全取代
   const [ personsState, setPersonsState ] = useState({
     persons: [
       { name: 'mac', age: 28},
       { name: 'alex', age: 23},
       { name: 'pei', age: 22},
     ],
-    otherState: 'other value'
   });
+  // 多重用法，直接傳入物件或字串 setOtherState目前沒設定function
+  const [ otherState, setOtherState] = useState({otherState: 'set other state'});
+
+  console.log(personsState, otherState);
 
   const switchNameHandler = () => {  //要用arrow function
     // console.log('ckicked')
@@ -19,9 +23,10 @@ const App = props => {
     setPersonsState({
       persons:[
         { name: 'apple', age: 28},
-        { name: 'alex', age: 23},
+        { name: 'lux', age: 23},
         { name: 'pei', age: 30},
-      ]
+      ],
+      otherState: 'update other value'
     })
   };
     return (
