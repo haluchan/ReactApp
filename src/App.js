@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+import Person from "./Person/Person.js";
+class App extends Component {
+  state = {
+      persons:[
+        { name: 'mac', age: 28},
+        { name: 'alex', age: 23},
+        { name: 'pei', age: 22},
+      ]
+    };
+  switchNameHandler = () => {  //要用arrow function
+    // console.log('ckicked')
+    //DO DO THIS: this.state.persons[0].name = 'apple'
+    this.setState({
+      persons:[
+        { name: 'apple', age: 28},
+        { name: 'alex', age: 23},
+        { name: 'pei', age: 30},
+      ]
+    })
+  }
+  render() {
+    return (
+      <div className='App'>
+        <h1>I'm a react app</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <button onClick={this.switchNameHandler}>switch name</button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <Person name={ this.state.persons[0].name } age={ this.state.persons[0].age }> hello </Person>
+        <Person name={ this.state.persons[1].name } age={ this.state.persons[1].age }/>
+        <Person name={ this.state.persons[2].name } age={ this.state.persons[2].age }/>
+      </div>
+    )
+    // return (
+    //   React.createElement('div', { className:'App'}, React.createElement('h1',null ,'Hi I\'m a react app'))
+    // )
+  }
 }
 
 export default App;
